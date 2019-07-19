@@ -6,6 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/* version A.B.CC.DD
+ * A - main version
+ * B - big update
+ * CC - minor feature
+ * DD - minor commit
+ */
+
+/**
+ * @version 0.0.00.05
+ */
 public class Main extends Application {
 
     @Override
