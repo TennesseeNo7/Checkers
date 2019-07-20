@@ -1,4 +1,4 @@
-# Checkers
+# Checkers 0.0.01.00
 
 Current concept:
 
