@@ -3,8 +3,8 @@
 TODO:
 
  * simple game; no menu
-   * hello
-   * its me
+   * game initializes with fields, some containing pawns
+   * player1 
  * 2 players, white pawns top
  * no kings
  * moves and capturing
@@ -24,4 +24,7 @@ TODO:
  - game displays winner
  - player names
  - score
+ 
+ - [ ] hello
+ - [X] its me
  
