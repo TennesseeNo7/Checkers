@@ -36,3 +36,12 @@ TODO:
  - game displays winner
  - player names
  - score
+ 
+VERSION INFO:
+ 
+ A.B.CC.DD
+
+ - A: General update
+ - B: New features
+ - CC: Small changes or features
+ - DD: Minor fixes and features
