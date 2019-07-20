@@ -6,18 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * @version 0.0.01.01
+ */
 public class Main extends Application {
-
-    /**
-     * A.B.CC.DD
-     *
-     * A -
-     * B -
-     * CC -
-     * DD -
-     *
-     * @version 0.0.0.11
-     */
 
     @Override
     public void start(Stage primaryStage) throws Exception {
