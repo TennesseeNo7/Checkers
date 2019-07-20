@@ -6,12 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * @version 0.0.01.00
+ */
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("../gui/layout/mainWindow.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Checkers");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
