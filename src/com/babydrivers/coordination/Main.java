@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * @version 0.0.01.00
+ * @version 0.0.01.01
  */
 public class Main extends Application {
 
