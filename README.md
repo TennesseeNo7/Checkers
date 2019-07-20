@@ -3,8 +3,8 @@
 TODO:
 
  - simple game; no menu
- -- hello
- -- its me
+  - hello
+  - its me
  - 2 players, white pawns top
  - no kings
  - moves and capturing
