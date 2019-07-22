@@ -1,5 +1,8 @@
 package com.babydrivers.gui.controllers;
 
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -14,9 +17,13 @@ public class Controller {
     Button[][] buttonArray = new Button[8][4];
     public void initialize(){
 
+        //TODO Scalable board
+
         //gridPane.setStyle("-fx-background-image: url{/rsc/black.png}");
-        int padding = 8;
+        int padding = 11;
         gridPane.setPadding(new Insets(padding,padding,padding,padding));
+
+        BackgroundSize size = new BackgroundSize(50, 50, false, false, true, true);
 
         BackgroundImage backgroundImage = new BackgroundImage(new Image(getClass().getResource("/rsc/board.png").toExternalForm()),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
@@ -35,6 +42,14 @@ public class Controller {
                 tmp.setPrefHeight(75);
                 tmp.setPrefWidth(75);
 
+                tmp.setId(i+"x"+j);
+
+                tmp.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        System.out.println(tmp.getId());
+                    }
+                });
 
                 buttonArray[i][j] = tmp;
                 gridPane.add(tmp,pos,i);
@@ -43,8 +58,9 @@ public class Controller {
             }
         }
 
+
         BackgroundImage black = new BackgroundImage(new Image(getClass().getResource("/rsc/black.png").toExternalForm()),
-                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, size);
         Background blackBackground = new Background(black);
 
         for(int i=0; i<3; i++){
@@ -54,7 +70,7 @@ public class Controller {
         }
 
         BackgroundImage white = new BackgroundImage(new Image(getClass().getResource("/rsc/white.png").toExternalForm()),
-                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, size);
         Background whiteBackground = new Background(white);
 
         for(int i=7; i>4; i--){
@@ -63,5 +79,18 @@ public class Controller {
             }
         }
 
+        BackgroundImage empty = new BackgroundImage(new Image(getClass().getResource("/rsc/empty_field.png").toExternalForm()),
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, size);
+        Background emptyBackground = new Background(empty);
+
+        for(int i=3; i<5; i++){
+            for(int j=0; j<buttonArray[i].length; j++){
+                buttonArray[i][j].setBackground(emptyBackground);
+            }
+        }
+
+
     }
+
+
 }

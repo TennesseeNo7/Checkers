@@ -7,7 +7,7 @@
 
 <!--TODO css button styles on hover-->
 
-<GridPane fx:id="gridPane" alignment="center" hgap="2" vgap="2" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.babydrivers.gui.controllers.Controller" >
+<GridPane fx:id="gridPane" alignment="center" hgap="3" vgap="3" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.babydrivers.gui.controllers.Controller" >
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
